@@ -1,6 +1,6 @@
 {
   "name": "rebreedPress",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "WP用",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.0.9",
     "node-sass-package-importer": "^5.2.0",
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "npm-check-updates": "^2.15.0"
   }
 }
