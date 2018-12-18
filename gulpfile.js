@@ -14,7 +14,6 @@ const plumber         = require("gulp-plumber");
 
 // SASS
 gulp.task('sass', function(done) {
-  //console.log('sass');
   gulp.src('./src/assets/scss/*.scss')
     .pipe(plumber())
     .pipe(sassGlob())
