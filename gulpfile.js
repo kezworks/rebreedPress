@@ -2,7 +2,7 @@
 // Ver 1.1.0
 
 // SETTINGS
-const localDir        = "";
+const localDir        = "wp";
 
 const gulp            = require('gulp');
 const sass            = require('gulp-sass');
@@ -50,4 +50,4 @@ gulp.task('watch', function() {
 });
 
 // DEFAULT
-gulp.task('default', gulp.series('watch', 'browser-sync'));
+gulp.task('default', gulp.series('browser-sync', 'watch'));
