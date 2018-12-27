@@ -39,8 +39,8 @@ gulp.task('sass', function(done) {
 gulp.task('image-compression', function(done) {
   gulp.src('./src/assets/images/**/*+(jpg|jpeg|png|gif)')
     .pipe(imagemin([
-      imageminPng(),
-      imageminJpg(),
+      imageminPng({ quality: '65-80' }),
+      imageminJpg({ quality: 80 }),
       imageminGif(),
       imageminSvg()
     ]))
