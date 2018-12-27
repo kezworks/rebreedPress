@@ -1,16 +1,20 @@
 // rebreedPress
-// Ver 1.1.0
+// Ver 1.2.0
 
 // SETTINGS
 const localDir        = "wp";
 
 const gulp            = require('gulp');
+const changed         = require('gulp-changed');
+
 const sass            = require('gulp-sass');
 const sassGlob        = require('gulp-sass-glob');
 const autoprefixer    = require('gulp-autoprefixer');
-const packageImporter = require('node-sass-package-importer');
-const browserSync     = require('browser-sync');
 const plumber         = require("gulp-plumber");
+const packageImporter = require('node-sass-package-importer');
+
+const browserSync     = require('browser-sync');
+
 const imagemin        = require('gulp-imagemin');
 const imageminJpg     = require('imagemin-mozjpeg');
 const imageminGif     = require('imagemin-gifsicle');
@@ -31,20 +35,23 @@ gulp.task('sass', function(done) {
       browsers: ['last 2 version', 'iOS >= 8.1', 'Android >= 4.4'],
       cascade: false
     }))
-    .pipe(gulp.dest('./dist/assets/css/'));
+    .pipe(gulp.dest('./dist/assets/css/')
+  );
   done();
 });
 
 // IMAGE-COMPRESSION
 gulp.task('image-compression', function(done) {
   gulp.src('./src/assets/images/**/*+(jpg|jpeg|png|gif)')
+    .pipe(changed('./dist/assets/images/'))
     .pipe(imagemin([
       imageminPng({ quality: '65-80' }),
       imageminJpg({ quality: 80 }),
       imageminGif(),
       imageminSvg()
     ]))
-    .pipe(gulp.dest( './dist/assets/images/' ));
+    .pipe(gulp.dest( './dist/assets/images/' )
+  );
   done();
 });
 
@@ -65,6 +72,7 @@ gulp.task('reload', function(done) {
 // WATCH
 gulp.task('watch', function() {
   gulp.watch('./src/assets/scss/**/*.scss', gulp.series('sass', 'reload'));
+  gulp.watch('./src/assets/images/**/*+(jpg|jpeg|png|gif)', gulp.series('image-compression', 'reload'));
   gulp.watch('./**/*.php', gulp.task('reload'));
 });
 
