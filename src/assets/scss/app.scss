@@ -1,36 +1,12 @@
-// CSS GRID by kezworks
-// version: 1.0.2
+//  rebreedPress
+//  version: 1.0.2
 
 @charset 'utf8';
-
-// SETTINGS - 変数設定
-// --------------------------------------------------
-
-$site-width: 1125px;
-$site-gap:   30px;
-
-$font-jp-gothic: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-
-$font-jp-mincho: "Hiragino Mincho ProN","ヒラギノ明朝 Pro W3","HGS明朝B","ＭＳ Ｐ明朝","Times New Roman",serif,"Meiryo","メイリオ","ＭＳ Ｐゴシック",sans-serif;
-
-$white: #fff;
-$black: #000;
-$gray:  #666;
-
-$color-bg-cream:       #ece4d9;
-$color-bg-lightgray:   #f6f5f0;
-$color-accent-red:     #be0e0e;
-$color-accent-green:   #036a00;
-
-$color-bg-animation-1: #000;
-
-$pc:   1024px;
-$tab:   680px;
-$sp:    480px;
 
 // IMPORT
 @import "node_modules/normalize-scss/sass/normalize/import-now";
 
+@import "settings";
 @import "mixin/**";
 
 @import 'base/**';

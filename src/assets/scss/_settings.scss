@@ -1,0 +1,60 @@
+// rebreedPress
+// SETTINGS
+// -----------------------------
+
+//  1. Global
+//  2. Breakpoints
+//  3. Grid
+//  4. Base Typography
+//  5. Colors
+
+
+// 1. Global
+// ---------
+
+$global-site-width: 1125px;
+$global-font-size: 100%;
+$global-lineheight: 1.5;
+
+// 2. Breakpoints
+// --------------
+
+$pc:   1024px;
+$tab:   680px;
+$sp:    480px;
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+
+// 3. Grid
+// -----------
+
+$global-grid-gap: 30px;
+
+// 4. Base Typography
+// ------------------
+
+$font-jp-gothic: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+$font-jp-mincho: "Hiragino Mincho ProN","ヒラギノ明朝 Pro W3","HGS明朝B","ＭＳ Ｐ明朝","Times New Roman",serif,"Meiryo","メイリオ","ＭＳ Ｐゴシック",sans-serif;
+
+// 5. Colors
+// ------------------
+
+$color-base-palette: (
+  white: #fff,
+  black: #000,
+  gray:  #666,
+  lightgray: #f6f5f0,
+);
+
+$color-accnent-palette: (
+  red:     #be0e0e,
+  green:   #036a00,
+  cream:   #ece4d9,
+);
