@@ -1,0 +1,39 @@
+// SMACCS Block  - ブロック
+// header
+// --------------------------------------------------
+
+.b-header{
+  .l-inner{
+    padding: 20px 0;
+    .l-wrapper{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .logo{
+      display: inline-block;
+      margin-bottom: 0;
+    }
+    .global-nav{
+      ul{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        justify-content:flex-end;
+        align-items: center;
+        height: 100%;
+        >li{
+          margin-right: 20px;
+          &:last-child{
+            margin-right: 0;
+          }
+          >a{
+            font-weight: bold;
+            color: $black;
+            font-size: .9rem;
+          }
+        }
+      }
+    }
+  }
+}

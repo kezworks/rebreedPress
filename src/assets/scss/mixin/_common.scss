@@ -1,0 +1,42 @@
+// Mixins
+// common
+// --------------------------------------------------
+
+
+// MEDIA QUERY
+@mixin mx-pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+@mixin mx-tab {
+  @media (min-width: ($tab)) {
+    @content;
+  }
+}
+@mixin mx-sp {
+  @media (min-width: ($sp)) {
+    @content;
+  }
+}
+
+// CSS GRID
+
+@mixin mx-grid_auto_column($max-columns:4, $min-columns:1 ,$gap:$global-grid-gap, $type:auto-fill, $exclusion:0,){
+  display: grid;
+  grid-template-columns: repeat($min-columns,1fr);
+  grid-gap: $gap / 2;
+  @include mx-tab(){
+    grid-template-columns: repeat($type, minmax( ($global-site-width - $exclusion) / $max-columns - $gap ,1fr));
+    grid-gap: $gap;
+  }
+}
+
+// ICON
+
+@mixin mx-fa($code){
+  font-family: "Font Awesome 5 Free";
+  content: $code;
+  margin-right: .3rem;
+  text-decoration: none;
+}

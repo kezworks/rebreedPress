@@ -1,0 +1,17 @@
+// SMACCS Module  - モジュール
+// article
+// --------------------------------------------------
+
+.m-article-header{
+  overflow: hidden;
+  text-align: center;
+  .title{
+    display: inline-block;
+    padding: 0 50px;
+    margin-bottom: .5rem;
+  }
+  .sub{
+    margin-bottom: 3rem;
+    font-size: .8rem;
+  }
+}

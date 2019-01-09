@@ -1,0 +1,154 @@
+// SMACCS Module  - モジュール
+// other
+// --------------------------------------------------
+
+// 汎用
+
+.m-extend{
+  width: 100%;
+}
+
+.m-menulist{
+  .item{
+    display: grid;
+    grid-template-columns: 1fr 70px;
+    font-size: .9rem;
+    .name{
+      font-weight: bold;
+    }
+    .price{
+      @include price(0.9rem);
+      text-align: right;
+    }
+  }
+}
+
+.m-photo-slider{
+  margin-bottom: 3rem !important;
+  img{
+    margin-bottom: 1.5rem;
+  }
+  .text{
+    text-align: center;
+    margin-bottom: 1rem;
+    .pre{
+      font-size: .7rem;
+      margin-bottom: .5rem;
+    }
+    .title{
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: .8rem;
+    }
+    .other{
+      font-size: .8rem;
+    }
+  }
+
+}
+
+.m-photo-slider{
+  height: 300px;
+}
+
+.m-overlay{
+  position: relative;
+  img{
+    width: 100%;
+  }
+  .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+}
+
+.m-attention{
+  ul{
+    li{
+      font-size: .9rem;
+      line-height: 1.8;
+      font-weight: bold;
+      list-style-type: none !important;
+      &:before{
+        content: "※";
+        margin-right: .5rem;
+      }
+    }
+  }
+}
+
+.m-list{
+  li{
+    margin-bottom: 1.2rem;
+    .title{
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+    .label,.desc{
+      margin-bottom: .5rem;
+    }
+    .label{
+      font-weight: bold;
+    }
+    .desc{
+      font-size: .9rem;
+    }
+  }
+}
+
+.m-mv{
+  position: relative;
+  height: 400px;
+  color: $white;
+  .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+  }
+}
+
+.m-breadcrumbs{
+  margin-top: 2rem;
+  ol{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+    font-size: .8rem;
+    font-weight: bold;
+    li{
+      display: flex;
+      align-items: center;
+      height: 25px;
+      &:before {
+        margin:0 .6rem;
+        content: " > ";
+      }
+      &:first-child:before {
+        content:"";
+        margin: 0;
+      }
+      a{
+        color: $black;
+        &:hover{
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.m-photo-loopslider{
+  width: 100vw;
+}
+
+.m-map{
+  line-height: 0;
+}

@@ -1,0 +1,718 @@
+// SMACCS Block  - ブロック
+// page
+// --------------------------------------------------
+
+// 10000 - index
+.b-index{
+  .cover{
+    position: relative;
+    width: 100vw;
+    max-height: 800px;
+    margin-bottom: 1rem;
+    .photo{
+      overflow: hidden;
+      max-height: 800px;
+    }
+
+    .text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+      color: $white;
+      font-weight: bold;
+      @include mx-pc{
+        top: inherit;
+        left: inherit;
+        bottom:100px;
+        right: 100px;
+        transform: none;
+        text-align: left;
+      }
+      &:after{
+        @include mx-pc{
+          content: "/";
+          position: absolute;
+          font-size: 20rem;
+          top: -150px;
+          left: -150px;
+        }
+      }
+      .title{
+        display: inline-block;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 3px solid $white;
+        @include mx-pc{
+          font-size: 3rem;
+          margin-bottom: 1.5rem;
+          padding-bottom: 1.5rem;
+          border-bottom: 5px solid $white;
+        }
+      }
+      .other{
+        font-size: 1.8rem;
+        line-height: 1.2;
+        font-family: 'Caveat Brush', cursive;
+        @include mx-pc{
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    .mask{
+      width: 100vw;
+      height: 29px;
+      position: absolute;
+      bottom: 0;
+      background-image: url('../img/bg_wave_white.png');
+      background-repeat: repeat-x;
+      background-position: bottom;
+    }
+  }
+
+  &-news{
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #CCC;
+    .m-article-header{
+      .title{
+        &:after,&:before{
+          background: none;
+        }
+      }
+    }
+
+    .text{
+      text-align: center;
+      ul{
+        list-style: none;
+        li{
+          .title{
+            font-size: .9rem;
+            font-weight: bold;
+            .date{
+              color: map-get($color-accnent-palette,'red');
+              margin-right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-concept{
+    background: map-get($color-accnent-palette,'cream');
+    .l-wrapper{
+      @include mx-grid_auto_column(2);
+    }
+    .text{
+      padding: 50px 30px;
+      .title{
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    }
+
+    .photo{
+      position: relative;
+      .m-btn{
+        position: absolute;
+        display: inline-block;
+        background: map-get($color-accnent-palette,'red');
+        right: 30px;
+        bottom: -30px;
+      }
+    }
+  }
+}
+
+// 11000 - about
+.b-about{
+  .m-mv{
+    @include mx-mv-bg('about');
+  }
+
+  &-concept{
+    .text{
+      padding: 0 30px;
+      .heading{
+        font-weight: bold;
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .en{
+        color: map-get($color-accnent-palette,'red');
+        font-size: 1.8rem;
+        text-align: center;
+        font-family: 'Caveat Brush', cursive;
+      }
+
+      .desc{
+        @include mx-tab(){
+          text-align: center;
+        }
+        .m-text{
+          line-height: 2;
+        }
+      }
+    }
+  }
+
+  &-chef{
+    background: map-get($color-accnent-palette,'cream');
+  }
+
+  &-recommend{
+    .l-wrapper{
+      @include mx-grid_auto_column(4,2);
+    }
+    .item{
+      .photo{
+        margin-bottom: .5rem;
+      }
+      .name{
+        font-weight: bold;
+        font-size: .9rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// 12000 - menu
+.b-menu{
+
+  .m-mv{
+    @include mx-mv-bg('menu');
+  }
+
+  //コースメニュー
+  &-course{
+
+    .cover{
+      margin-bottom: 3rem;
+      .text{
+        @include mx-pc{
+          top: inherit;
+          bottom: 50px;
+        };
+        color: $white;
+        font-weight: bold;
+        font-size: 2rem;
+        text-shadow:0px 0px 10px #999999;
+        span{
+          border-top: 3px solid $white;
+          margin-top: 1rem;
+          padding-top: 1rem;
+          font-size: 1.2rem;
+          display: block;
+        }
+      }
+    }
+
+    &-pickup,&-other{
+      .item{
+        background: map-get($color-base-palette,'lightgray');
+        padding: 30px;
+        margin-bottom: 0rem;
+        position: relative;
+        padding-bottom: 90px;
+        .l-header{
+          text-align: center;
+          margin-bottom: 2rem;
+          h1{
+            text-align: center;
+            margin-bottom: .8rem;
+          }
+          .freedrink{
+            display: inline-block;
+            font-size: .8rem;
+            padding: 8px 16px;
+            border: 2px solid map-get($color-accnent-palette,'red');
+            font-weight: bold;
+            color: map-get($color-accnent-palette,'red');
+            background: $white;
+            i{
+              margin-right: .5rem;
+            }
+          }
+        }
+        .m-list{
+          font-size: .9rem;
+          li{
+            padding-bottom: .6rem;
+            border-bottom: 1px dotted #aaa;
+            &:last-child{
+              border: none;
+            }
+            .desc{
+              font-size: .8rem;
+            }
+            .or{
+              font-weight: bold;
+              color: #333;
+              margin-right: .3rem;
+            }
+          }
+        }
+        .reserve{
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    &-pickup{
+      .pre{
+        position: relative;
+        display: inline-block;
+        padding: 0 45px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        &:before, &:after{
+          content: '';
+          position: absolute;
+          top: 30%;
+          display: inline-block;
+          width: 22px;
+          height: 2px;
+          background-color: black;
+        }
+        &:before{
+          left:0;
+          transform: rotate(60deg);
+        }
+        &:after{
+          right: 0;
+          transform: rotate(-60deg);
+        }
+      }
+      h1{
+        font-size: 2rem ;
+      }
+
+      .l-wrapper{
+        @include mx-grid_auto_column(2,$exclusion:60);
+      }
+      .item{
+        margin-bottom: 4rem;
+      }
+    }
+
+    &-other{
+      @include mx-grid_auto_column(3);
+      h1{
+        font-size: 1.3rem ;
+      }
+      .weekday{
+        margin-right: .3rem;
+        color: map-get($color-accnent-palette,'red');
+      }
+    }
+  }
+
+  //アラカルト
+  &-alacarte{
+    background: map-get($color-accnent-palette,'cream');
+    .l-wrapper{
+      width: 100vw;
+      @include mx-tab(){
+        @include mx-grid_auto_column(2);
+      }
+    }
+    .m-menulist{
+      background: $white;
+      padding: 30px;
+      >.title{
+        text-align: center;
+        .circle{
+          font-size: 2.5rem;
+          display: inline-block;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          color: $white;
+          background: map-get($color-accnent-palette,'green');
+          text-align:center;
+          line-height: 120px;
+        }
+      }
+    }
+    .m-photo-slider{
+      margin-top: -120px;
+      height: inherit;
+      .pre{
+        font-weight: bold;
+        color: map-get($color-accnent-palette,'green');
+        font-size: .8rem;
+        margin-bottom: .3rem;
+      }
+      .title{
+        margin-bottom: .4rem;
+      }
+      .other{
+        @include price(1.2rem);
+      }
+    }
+  }
+
+  //ドリンク
+  &-drink{
+    .l-wrapper{
+      @include mx-grid_auto_column(3,$gap:10px);
+    }
+    .m-menulist{
+      padding: 30px;
+      >.title{
+        border-bottom: 1px dotted $black;
+        margin-bottom: 1rem;
+        padding-bottom: .5rem;
+      }
+    }
+  }
+
+}
+
+// 13000 - shop
+.b-shop{
+  .m-mv{
+    @include mx-mv-bg('shop');
+  }
+
+  &-information{
+    .l-wrapper{
+      @include mx-grid_auto_column(2);
+    }
+
+    .content{
+      padding: 0 30px;
+    }
+    .m-list{
+      list-style: none;
+      margin: 0;
+    }
+  }
+
+  &-instore{
+    background: map-get($color-accnent-palette,'cream');
+    .l-wrapper{
+      @include mx-grid_auto_column(4,2);
+    }
+  }
+
+  &-map{
+
+  }
+}
+
+// 14000 - reserve
+.b-reserve{
+  .m-mv{
+    @include mx-mv-bg('reserve');
+  }
+
+  &-tel{
+
+    .tel{
+      background: map-get($color-base-palette,'lightgray');
+      padding: 30px 30px 200px;
+      text-align: center;
+      background-image: url('../img/reserve/bg_tel.png');
+      background-size: 250px;
+      background-repeat: no-repeat;
+      background-position: center 200px;
+      .intro{
+        font-size: .9rem;
+        margin-bottom: .9rem;
+        position: relative;
+        display: inline-block;
+        padding: 0 45px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        &:before, &:after{
+          content: '';
+          position: absolute;
+          top: 30%;
+          display: inline-block;
+          width: 22px;
+          height: 2px;
+          background-color: black;
+        }
+        &:before{
+          left:0;
+          transform: rotate(60deg);
+        }
+        &:after{
+          right: 0;
+          transform: rotate(-60deg);
+        }
+      }
+      .number{
+        font-weight: bold;
+        font-size: 2.5rem;
+        font-family: "Oswald";
+        margin-bottom: 1rem;
+        i{
+          margin-right: .5rem;
+        }
+      }
+
+      .time{
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: map-get($color-accnent-palette,'green');
+        color: $white;
+        font-weight: bold;
+        font-size: .9rem;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &-web{
+    .l-wrapper{
+      @include mx-grid_auto_column(3);
+    }
+    .flow{
+      padding: 10px 30px;
+      padding-bottom: 30px;
+      border-bottom: 3px solid map-get($color-accnent-palette,'green');
+      .step{
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: bold;
+        font-family: "Oswald";
+        color: map-get($color-accnent-palette,'green');
+        margin-bottom: 1rem;
+      }
+      .title{
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
+
+      .desc{
+        font-size: .8rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+// 12000 - reform
+.b-reform{
+  &-service{
+    &-list{
+      .l-item{
+        @include mx-grid_auto_column($max-columns:2,$gap:60px);
+        margin-bottom: 5rem;
+        .text{
+          margin-top: 80px;
+          position: relative;
+          .title{
+            margin-left: 100px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: .5rem;
+          }
+          .en{
+            margin-left: 100px;
+            margin-bottom: 2rem;
+            color: map-get($color-base-palette,gray);
+            font-size: .9rem;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+          }
+          .desc{
+            font-size: .9rem;
+            margin-bottom: 2rem;
+            span{
+              display: block;
+              font-size: .8rem;
+            }
+          }
+        }
+        .kitchen,.bath,.toilet{
+          &:before{
+            position: absolute;
+            font-size: 5rem;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+            top: -20px;
+          }
+        }
+        .kitchen{
+          &:before{
+            content: '01';
+          }
+        }
+        .bath{
+          &:before{
+            content: '02';
+          }
+        }
+        .toilet{
+          &:before{
+            content: '03';
+          }
+        }
+
+        .more{
+          display: flex;
+          justify-content: flex-end;
+          a{
+            i{
+              margin-right: 1rem;
+              color: map-get($color-base-palette,orange);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 15000 - faq
+.b-faq{
+  &-list{
+    padding: 1.5rem 0 !important;
+  }
+
+  &-topnav{
+    background: rgb(4,68,112);
+    background: linear-gradient(135deg, rgba(4,68,112,1) 0%, rgba(27,159,170,1) 100%);
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    ol{
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        margin: 0 2rem;
+        a{
+          color: $white;
+          font-size: .8rem;
+          font-weight: bold;
+          text-decoration: none;
+          &:before{
+            @include mx-fa('\f107');
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  &-list{
+    &-items{
+      .title{
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .l-item{
+        border-radius: 15px;
+        background: #efefef;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        cursor: pointer;
+        &:hover,&.focus{
+          background: rgb(4,68,112);
+          background: linear-gradient(135deg, rgba(4,68,112,1) 0%, rgba(27,159,170,1) 100%);
+          .q{
+            color: $white;
+          }
+        }
+        &:last-child{
+          margin-bottom: 5rem;
+        }
+        .q{
+          font-weight: bold;
+          line-height: 20px;
+          margin: 0;
+          &:before{
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            content:'Q';
+          }
+
+        }
+        .a{
+          font-size: .9rem;
+          font-weight: bold;
+          margin-top: 1.5rem;
+          margin-bottom: 0;
+          background: $white;
+          padding: 1.5rem;
+          border-radius: 15px;
+          &:before{
+            font-weight: bold;
+            margin-right: 1rem;
+            content:'A';
+          }
+        }
+      }
+    }
+  }
+}
+
+// other
+.b-bottom-service{
+  background: map-get($color-base-palette,lightgray);
+  .service-list{
+    @include mx-grid_auto_column($max-columns:3,$gap:60px);
+    .l-item{
+      @include mx-box-shadow;
+      a{
+        text-decoration: none;
+        color: $black;
+      }
+      &:hover{
+
+      }
+      .photo{
+      }
+      .text{
+        padding: 1.5rem;
+        font-weight: bold;
+        .title{
+          margin-bottom: .5rem;
+        }
+        .desc{
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}
+
+.b-bottom-contact{
+  background: map-get($color-accnent-palette,blue);
+  .m-article-header{
+    color: $white;
+
+    .sub{
+      margin-bottom: 1.5rem;
+    }
+    .desc{
+      font-size: .9rem;
+      font-weight: bold;
+    }
+  }
+  .contact-list{
+    @include mx-grid_auto_column($max-columns:3,$gap:60px);
+    .l-item{
+
+    }
+  }
+}

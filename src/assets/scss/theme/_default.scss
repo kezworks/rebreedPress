@@ -1,0 +1,25 @@
+//slick custom
+.slick-next,.slick-prev{
+  top: inherit;
+  bottom: 25px;
+  z-index: 10;
+}
+.slick-next{ right: 10px;}
+.slick-prev{ left: 10px;}
+.slick-next:before,.slick-prev:before { color: $black;}
+
+// Contact Form 7
+
+.form{  text-align: center;}
+
+.wpcf7{
+  margin-top: 50px !important;
+  display: inline-block !important;
+  form{
+    text-align: left !important;
+    label{
+      font-size: .9rem !important;
+      font-weight: bold !important;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+// SMACCS Block  - ブロック
+// footer
+// --------------------------------------------------
+
+.b-sns{
+  background-color: #f6f5f0;
+  border-top: 1px solid #e5e5de;
+  border-bottom: 1px solid #e5e5de;
+  .l-inner{
+    padding: 5rem 0;
+  }
+  .l-wrapper{
+    @include mx-grid_auto_column(2);
+  }
+
+  &-facebook,&-instagram{
+    >.title{
+      text-align: center;
+      font-size: 2rem;
+      color: $black;
+      font-family: 'Caveat Brush', cursive;
+    }
+  }
+}
+
+.b-pagetop{
+  background: $black;
+  text-align: center;
+  a{
+    display: inline-block;
+    margin: 20px 0;
+    font-weight: bold;
+    color: $white;
+  }
+}
+
+.b-footer{
+  margin: 40px auto 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Oswald', sans-serif;
+}

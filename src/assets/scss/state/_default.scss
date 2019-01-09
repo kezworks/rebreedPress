@@ -1,0 +1,15 @@
+// SMACCS State   - ステート
+// --------------------------------------------------
+
+.is-mobile-nowrap{
+  br{
+    display: none;
+    @include mx-tab(){
+      display: inherit;
+    }
+  }
+}
+
+.is-hide{
+  display: none;
+}
