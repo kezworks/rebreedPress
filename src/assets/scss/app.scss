@@ -1,5 +1,5 @@
 //  rebreedPress
-//  version: 1.0.2
+//  version: 1.1.0
 
 @charset 'utf8';
 
@@ -7,6 +7,8 @@
 @import "node_modules/normalize-scss/sass/normalize/import-now";
 
 @import "settings";
+@import "functions";
+@import "font";
 @import "mixin/**";
 
 @import 'base/**';

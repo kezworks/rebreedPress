@@ -45,16 +45,19 @@ $font-jp-mincho: "Hiragino Mincho ProN","ヒラギノ明朝 Pro W3","HGS明朝B"
 
 // 5. Colors
 // ------------------
+$black: rgba(10,10,10,1);
+$white: rgba(254,254,254,1);
+$body-background: $white;
+$body-font-color: $black;
 
 $color-base-palette: (
-  white: #fff,
-  black: #000,
-  gray:  #666,
-  lightgray: #f6f5f0,
-);
-
-$color-accnent-palette: (
-  red:     #be0e0e,
+  white: rgba(255,255,255,1),
+  black: rgba(0,0,0,1),
+  gray:  rgba(102,102,102,1),
+  lightgray: rgba(244,244,244,1),
+  red:     rgba(190,14,14,1),
+  blue:    rgba(0,53,103,1),
+  orange:  rgba(249,181,0,1),
   green:   #036a00,
   cream:   #ece4d9,
 );
