@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1 ">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   <?php wp_head(); ?>
 </head>
@@ -21,14 +21,19 @@
             <a href="<?php echo site_url(); ?>/"></a>
           </h1>
           <!-- Global Navigation -->
-          <nav class="global-nav">
-            <ul>
-              <li><a href="<?php echo site_url(); ?>/">メニュー1</a></li>
-              <li><a href="<?php echo site_url(); ?>/">メニュー2</a></li>
-              <li><a href="<?php echo site_url(); ?>/">メニュー3</a></li>
-              <li><a href="<?php echo site_url(); ?>/">メニュー4</a></li>
-            </ul>
-          </nav>
+
+          <?php
+            wp_nav_menu( array(
+              'theme_location'  =>'header_menu',
+              'container'       => 'nav',
+              'container_class' => 'global-nav',
+              'link_before'     => '',
+              'link_after'      => '',
+              'items_wrap'      =>'<ul class="main-menu">%3$s</ul>',
+              'walker'          => new custom_walker_nav_menu
+            ));
+          ?>
+
         </div>
       </div>
     </header>

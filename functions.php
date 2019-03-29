@@ -20,3 +20,10 @@ add_action( 'wp_enqueue_scripts', 'rebreedPress_scripts' );
 
 /** Various clean up functions */
 require_once( 'library/cleanup.php' );
+
+/** Generate breadcrumb functions */
+require_once( 'library/breadcrumbs.php' );
+
+
+/** メニュー */
+register_nav_menu('header_menu', 'ヘッダー');

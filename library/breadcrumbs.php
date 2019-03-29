@@ -95,7 +95,7 @@ if ( ! function_exists( 'breadcrumbs' ) ) {
                         $parent_term = get_term( $parent_id, $the_tax );
                         echo '<li>'.
                                 '<a href="'. get_term_link( $parent_id, $the_tax ) .'">'.
-                                    '<span>'. $parent_term->name .'</span>'.
+                                    $parent_term->name.
                                 '</a>'.
                              '</li>';
                     }
@@ -104,7 +104,7 @@ if ( ! function_exists( 'breadcrumbs' ) ) {
                 // 最下層のタームを表示
                 echo '<li>'.
                         '<a href="'. get_term_link( $term->term_id, $the_tax ). '">'.
-                            '<span>'. $term->name .'</span>'.
+                            $term->name.
                         '</a>'.
                      '</li>';
             }
@@ -193,7 +193,7 @@ if ( ! function_exists( 'breadcrumbs' ) ) {
                     $parent_term = get_term( $parent_id, $tax_name );
                     echo '<li>'.
                             '<a href="'. get_term_link( $parent_id, $tax_name ) .'">'.
-                                '<span>'. $parent_term->name .'</span>'.
+                                $parent_term->name.
                             '</a>'.
                          '</li>';
                 }
@@ -201,7 +201,7 @@ if ( ! function_exists( 'breadcrumbs' ) ) {
 
             // ターム自身の表示
             echo '<li>'.
-                    '<span>'. $term_name .'</span>'.
+                    $term_name.
                 '</li>';
 
 
@@ -228,7 +228,7 @@ if ( ! function_exists( 'breadcrumbs' ) ) {
             echo '<li><span>'. get_the_title() .'</span></li>';
         }
 
-        echo '</ol></div>';  // 冒頭に合わせて閉じタグ
+        echo '</ol></div></div>';  // 冒頭に合わせて閉じタグ
 
     }
 }
