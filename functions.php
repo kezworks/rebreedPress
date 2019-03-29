@@ -27,3 +27,13 @@ require_once( 'library/breadcrumbs.php' );
 
 /** メニュー */
 register_nav_menu('header_menu', 'ヘッダー');
+
+// ナビゲーション用カスタムウォーカー
+class custom_walker_nav_menu extends Walker_Nav_Menu {
+    function start_lvl(&$output, $depth = 0, $args = array()) {
+        $output .= '<div class="sub-menu-wrapper"><ul class="sub-menu">';
+    }
+    function end_lvl(&$output, $depth = 0, $args = array()) {
+        $output .= '</ul></div>';
+    }
+}
