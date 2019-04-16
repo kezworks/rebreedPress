@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: FW - 10000 トップページ
+Template Name: 10000 トップページ
 */
 get_header(); ?>
 

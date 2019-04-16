@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: FW - 11000 下層ページ
+Template Name: 11000 下層ページ
 */
 get_header(); ?>
 
