@@ -18,17 +18,25 @@ function rebreedPress_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'rebreedPress_scripts' );
 
-/** Various clean up functions */
+/** クリーンアップ */
 require_once( 'library/cleanup.php' );
 
-/** Generate breadcrumb functions */
+/** パンくずリスト生成 */
 require_once( 'library/breadcrumbs.php' );
+
+/** ページネーション生成 */
+require_once( 'library/pagenation.php' );
+
+/** ウィジェット */
+require_once( 'library/widget.php' );
 
 
 /** メニュー */
 register_nav_menu('header_menu', 'ヘッダー');
+register_nav_menu('footer_menu', 'フッター');
 
-// ナビゲーション用カスタムウォーカー
+
+/** ナビゲーション用カスタムウォーカー */
 class custom_walker_nav_menu extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = array()) {
         $output .= '<div class="sub-menu-wrapper"><ul class="sub-menu">';
